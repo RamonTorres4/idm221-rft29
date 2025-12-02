@@ -1,6 +1,7 @@
     :root {
         --primary-color: #EFF5EC;
         --secondary-color: #2E605D;
+        --secondary-color50: #2E605D50;
         --tertiary-color: #97a1a2;
         --quatnery-color: #ffd873;
         --quinary-color: #363636;
@@ -48,75 +49,6 @@
         padding: 1rem 0rem;
     }
 
-    img {
-        /* This controls the sizing for all website images */
-        height: auto;
-        width: 100%;
-    }
-
-    ul>li{
-            line-height: 1.7rem;
-            font-size: var(--xsmall);
-            margin-top: 1.3rem;
-    }
-    nav {
-        /* This controls the styling of the navigation */
-        background-color: var(--secondary-color);
-        text-align: right;
-        padding-bottom: 5%;
-        width: 100%;
-        border-bottom: 2px solid var(--tertiary-color);
-        /* position: sticky;
-        top: 0; */
-
-        ul {
-            list-style: none;
-        }
-
-        li {
-            margin: 0rem 1rem;
-
-            img {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 40%;
-            }
-        }
-    }
-
-    img.logonav {
-        /* This controls the logo in the navigation for the nav*/
-        Width: 20%;
-        padding-top: 5%;
-    }
-
-    nav>ul>li>a {
-        /* This controls the color of the navigation text */
-        color: var(--white)
-    }
-
-    footer {
-        background-color: #2E605D;
-        /* background: linear-gradient(to bottom, var(--secondary-color),var(--gradientbottom)); */
-        border-top: 2px solid var(--tertiary-color);
-        text-align: center;
-        padding-bottom: 5%;
-        ul {
-            list-style: none;
-
-            li {
-                margin: 0rem 1rem;
-                color: #fff;
-            }
-        }
-    }
-
-    footer>ul>li>a{
-        color: var(--white);
-        font-size: var(--xsmall);
-    }
-
     h1 {
         font-size: var(--xlarge);
         /* font-size: clamp(32px, 3rem, 48px); */
@@ -142,11 +74,6 @@
         margin-top: var(--rythym);
     }
 
-    h1, h2, h3 + p {
-        /* This says that anytime I have a paragraph follow an h1,h2,h3, add margin to the top*/
-        margin-top: 0.3rem;
-    }
-
     p {
         font-weight: 400;
         font-size: var(--small);
@@ -157,6 +84,29 @@
     span{
         font-weight: bold;
     }
+
+    img {
+        /* This controls the sizing for all website images */
+        height: auto;
+        width: 100%;
+    }
+
+    video{
+         height: auto;
+         width: 100%;
+    }
+
+    ul>li{
+            line-height: 1.7rem;
+            font-size: var(--xsmall);
+            margin-top: 0.3rem;
+            padding: 0.5rem 0.9rem 0rem 0.5rem;
+    }
+
+    li::marker{
+        color: var(--secondary-color);
+    }
+
 
     a:hover {
         /* This controls the color when you hover over a link. */
@@ -169,22 +119,92 @@
         color: var(--4th-color);
     }
 
+    ol{
+        li{
+            list-style-position: inside;
+            line-height: 1.7rem;
+            font-size: var(--xsmall);
+            margin-top: 0.8rem;
+            padding-left: 1rem;
+        }
+    }
+
+    nav {
+        /* This controls the styling of the navigation */
+        background-color: var(--secondary-color);
+        text-align: right;
+        padding-bottom: 5%;
+        width: 100%;
+        border-bottom: 2px solid var(--tertiary-color);
+        /* position: sticky;
+        top: 0; */
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin: 0rem 1rem;
+            padding: 0.1rem 0rem;
+            color: var(--white);
+
+            a{
+                color: var(--white)
+            }
+
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 40%;
+            }
+        }
+    }
+
+    img.logonav {
+        /* This controls the logo in the navigation for the nav*/
+        Width: 20%;
+        padding-top: 5%;
+    }
+ 
+
+    footer {
+        /* This controls the styling in the footer */
+        background-color: #2E605D;
+        /* background: linear-gradient(to bottom, var(--secondary-color),var(--gradientbottom)); */
+        border-top: 2px solid var(--tertiary-color);
+        text-align: center;
+        padding-bottom: 5%;
+        ul {
+            list-style: none;
+            
+            li {
+                margin: 0rem 1rem;
+                padding: 0.1rem 0rem;
+                color: var(--white);
+
+                a{
+                  color: var(--white);  
+                }
+            }
+        }
+    }
 
     .anchor {
         /* This controls the anchor tags at the top of the hobbies page */
-        margin: var(--rythym) 0;
-        /* background-color: #2E605D; */
+        background-color: #2E605D;
         margin-top: 0.5rem;
-        padding: var(--rythym) .5rem;
+        padding-bottom: 0.8rem;
+        border-style: solid;
+        border-color: var(--tertiary-color);
     /* This controls the anchor tags on the hobbies page */
         li {
             font-weight: 400;
             font-size: 1.1rem;
             list-style: none;
-            line-height: 2.5rem;
 
             a {
-                color: black;
+                color: #fff;
             }
     }
     }
@@ -203,17 +223,18 @@
     }
      div.bulletsins{
         /* This controls the ingredients/instructions lists under cooking in the hobbies page */
-        
         li {
             font-weight: 200;
-            font-size: 1.1rem;
+            font-size: var(--xsmall);
             list-style: none;
-            line-height: 2.3rem;
-            padding: 0.4rem 0 0 0;
+            line-height: 1.7rem;
+            padding: 0.4rem 0.3rem 0 0.3rem;
+            margin-top: -0.5rem;
 
                 span{
                     margin-top: 0.5rem;
                     display: block;
+                    background-color: var(--secondary-color50);
                 }
         }
     }
@@ -222,7 +243,7 @@
         /* This controls the styling for the list in the Magic the Gather section of hobbies */
     li{
         list-style-type: none;
-        line-height: 2rem;
+        line-height: 0rem;
             img{
                 width: 1rem;
             }
@@ -238,19 +259,23 @@
 /* This section is for the portfolio page */
 
    div>img {
-        margin-top: 1rem;
+    /* This controls the spacing between each photo.*/
+        margin-top: 0.8rem;
     }
 
     .title {
         text-align: center;
     }
 
-    .imggal {
+    .imggallery {
         /* This controls the container for divs that contain divs with images */
-        margin-top: 0.8rem;
+        margin-top: -0.5rem;
     }
 
-    .center {
-        /* This controls the middle row in tables */
-        width: 30%;
+    div>video{
+        margin-top: 1rem;
+    }
+    .videogallery{
+        /* This controls the container for divs that contain divs with images */
+        margin-top: 0.8rem;
     }
