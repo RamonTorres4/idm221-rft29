@@ -70,11 +70,14 @@ Image Sizes
 - Horizontal 322 x 230, or something around that.
 
 Color Selection
-- #CFC1B4
-- #FFFFFF
-- #C19C82
-- #EBD0BF
-- #111111 
+--primary-color: #EFF5EC;
+--secondary-color: #2E605D;
+--secondary-color50: #2E605D50;
+--tertiary-color: #97a1a2;
+--quatnery-color: #ffd873;
+--quinary-color: #363636;
+--black: #0000;
+--white: #fff;
 
 Screen Size
 - 340-580 small screen
