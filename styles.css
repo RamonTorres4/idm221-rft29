@@ -11,6 +11,7 @@
         --xlarge: 3rem;
         --large: 2rem;
         --medium: 1.5rem;
+        --medium-small: 1.3rem;
         --small: 1.1rem;
         --xsmall: 0.9rem;
     }
@@ -74,6 +75,13 @@
         margin-top: var(--rythym);
     }
 
+    h4{
+        font-size: var(--medium-small);
+        font-weight: 500;
+        letter-spacing: -0.1rem;
+        margin-top: var(--rythym);
+    }
+
     p {
         font-weight: 400;
         font-size: var(--small);
@@ -91,17 +99,31 @@
         width: 100%;
     }
 
+   div{
+        h2, h3, h4, p + span{
+            margin-top: -0.3rem;
+        }
+    }
+
     video{
          height: auto;
          width: 100%;
     }
 
-    ul>li{
-            line-height: 1.7rem;
+    ul{
+        li{
+            /* line-height: 1.7rem;
             font-size: var(--xsmall);
             margin-top: 0.3rem;
-            padding: 0.5rem 0.9rem 0rem 0.5rem;
+            padding: 0.5rem 0.9rem 0rem 0.5rem; */
+                        list-style-position: inside;
+            line-height: 1.7rem;
+            font-size: var(--xsmall);
+            margin-top: 0.8rem;
+            padding-left: 1rem;
+        }
     }
+
 
     li::marker{
         color: var(--secondary-color);
@@ -227,7 +249,7 @@
 
     .ingredients{
         /* This controls the ingredients list under cooking in the hobbies page */
-    margin: 0;
+    margin-top: var(--rythym);
         ul{
         margin: 0rem 1rem 0rem 0.5rem;
 
@@ -249,7 +271,7 @@
     }
      .instructions{
         /* This controls the instructions list under cooking in the hobbies page */
-            margin: 0;
+            margin-top: var(--rythym);
         li {
             font-weight: 200;
             font-size: var(--xsmall);
@@ -297,6 +319,7 @@
         margin-top: 1.3rem;
     }
 
+
     .title {
         text-align: center;
     }
@@ -312,4 +335,24 @@
     .videogallery{
         /* This controls the container for divs that contain divs with images */
         margin-top: 0.8rem;
+    }
+
+    /* This section is for the about page */
+
+    h4:first-child{
+        margin-bottom: -0.9rem;
+    }
+
+    .border{
+        /* This selector styles the borders of Divs */
+        border-style: solid;
+        border-width: thin;
+        margin-top: 0.5rem;
+        padding: 0.5rem 0rem 0rem 0.2rem;
+        border-color: var(--secondary-color50);
+    }
+
+    .job1{
+        /* This is my quick fix for the h4 "Web Coordinator" title on the about page */
+        margin-top: 1rem;
     }
