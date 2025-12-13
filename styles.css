@@ -8,12 +8,11 @@
         --black: #0000;
         --white: #fff;
         --rythym: 1.5rem;
-        --xlarge: 3rem;
-        --large: 2rem;
-        --medium: 1.5rem;
-        --medium-small: 1.3rem;
-        --small: 1.1rem;
-        --xsmall: 0.9rem;
+        --xlarge: 2rem;
+        --large: 1.5rem;
+        --medium: 1.17rem;
+        --small: 1rem;
+        --xsmall: 0.8rem;
     }
 
     @font-face {
@@ -47,7 +46,7 @@
     main {
         /* This adds space to the sides of the site for the elements that live inbetween the main tags. */
         margin: 1rem;
-        padding: 1rem 0rem;
+        padding: 1rem 0;
     }
 
     h1 {
@@ -55,68 +54,54 @@
         /* font-size: clamp(32px, 3rem, 48px); */
         font-weight: 900;
         line-height: 1.2;
-        letter-spacing: -0.1rem;
+        letter-spacing: 0;
+        /* margin-top: var(--rythym); */
 
     }
 
     h2 {
         font-size: var(--large);
-        font-weight: 700;
+        font-weight: 800;
         line-height: 1.4;
-        letter-spacing: -0.1rem;
-        margin-top: 1.8rem;
+        letter-spacing: 0;
+        margin-top: var(--rythym);
 
     }
 
     h3 {
         font-size: var(--medium);
-        font-weight: 600;
-        letter-spacing: -0.1rem;
+        font-weight: 700;
+        letter-spacing: 0;
         margin-top: var(--rythym);
     }
 
     h4{
-        font-size: var(--medium-small);
-        font-weight: 500;
-        letter-spacing: -0.1rem;
+        font-size: var(--small);
+        font-weight: 700;
+        letter-spacing: 0.1rem;
         margin-top: var(--rythym);
     }
 
     p {
         font-weight: 400;
         font-size: var(--small);
-        line-height: 1.7;
-        margin-top: 0.9rem;
+        letter-spacing: 0;
+        line-height: 1.7rem;
+        margin-top: var(--rythym);
     }
 
     span{
         font-weight: bold;
     }
 
-    img {
-        /* This controls the sizing for all website images */
-        height: auto;
-        width: 100%;
-    }
-
-   div{
-        h2, h3, h4, p + span{
-            margin-top: -0.3rem;
-        }
-    }
-
-    video{
-         height: auto;
-         width: 100%;
-    }
-
-    ul{
+       ul{
         li{
             /* line-height: 1.7rem;
             font-size: var(--xsmall);
             margin-top: 0.3rem;
             padding: 0.5rem 0.9rem 0rem 0.5rem; */
-                        list-style-position: inside;
+            list-style-position: inside;
+            font-weight: 400;
             line-height: 1.7rem;
             font-size: var(--xsmall);
             margin-top: 0.8rem;
@@ -124,21 +109,8 @@
         }
     }
 
-
     li::marker{
         color: var(--secondary-color);
-    }
-
-
-    a:hover {
-        /* This controls the color when you hover over a link. */
-        color: var(--quatnery-color);
-        /* text-shadow:  4px 8px red; */
-    }
-
-    a:active {
-        /* This controls the color when you click on a link. */
-        color: var(--quatnery-color);
     }
 
     ol{
@@ -149,6 +121,39 @@
             margin-top: 0.8rem;
             padding-left: 1rem;
         }
+    }
+
+    img {
+        /* This controls the sizing for all website images */
+        height: auto;
+        width: 100%;
+        margin-top: var(--rythym);
+    }
+
+    section{
+        margin-top: var(--rythym);
+        h2, h3 + p{
+            margin-top: 0.5rem;
+        }
+    }
+
+   div{
+    margin-top: var(--rythym);
+        h2, h3, h4, p + span{
+            margin-top: var(--rythym);
+        }
+    }
+
+    div>img {
+    /* This controls the spacing between each photo.*/
+        margin-top: var(--rythym);
+    }
+
+
+    video{
+         height: auto;
+         width: 100%;
+         margin-top: var(--rythym);
     }
 
     nav {
@@ -163,12 +168,15 @@
 
         ul {
             list-style: none;
+            margin: 0;
         }
 
         li {
-            margin: 0rem 1rem;
-            padding: 0.1rem 0rem;
+            margin: 0 1rem;
+            padding: 0.1rem 0;
             color: var(--white);
+            font-size: var(--small);
+            line-height: 2rem;
 
             a{
                 color: var(--white)
@@ -187,12 +195,6 @@
             }
         }
     }
-/* 
-    img.logonav {
-        Width: 20%;
-        padding-top: 5%;
-    }
-  */
 
     footer {
         /* This controls the styling in the footer */
@@ -205,9 +207,11 @@
             list-style: none;
             
             li {
-                margin: 0rem 1rem;
-                padding: 0.1rem 0rem;
+                margin: 0 1rem;
+                padding: 0.1rem 0;
                 color: var(--white);
+                font-size: var(--small);
+                line-height: 2rem;
 
                 a{
                   color: var(--white);  
@@ -226,6 +230,17 @@
                 }
             }
         }
+    }
+
+            a:hover {
+        /* This controls the color when you hover over a link. */
+        color: var(--quatnery-color);
+        /* text-shadow:  4px 8px red; */
+    }
+
+    a:active {
+        /* This controls the color when you click on a link. */
+        color: var(--quatnery-color);
     }
 
     .anchor {
@@ -251,14 +266,14 @@
         /* This controls the ingredients list under cooking in the hobbies page */
     margin-top: var(--rythym);
         ul{
-        margin: 0rem 1rem 0rem 0.5rem;
+        margin: 0 1rem 0 0.5rem;
 
             li {
                 font-weight: 300;
                 font-size: var(--xsmall);
-                margin: 0.5rem 0rem 0rem -0.2rem;
+                margin: 0.5rem 0 0 -0.2rem;
                 line-height: 1.5rem;
-                padding: .2rem 0rem;
+                padding: .2rem 0;
                 list-style: none;
 
                 input{
@@ -277,7 +292,7 @@
             font-size: var(--xsmall);
             list-style: none;
             line-height: 1.7rem;
-            padding: 0.4rem 0.3rem 0rem 0.3rem;
+            padding: 0.4rem 0.3rem 0 0.3rem;
             margin-top: -0.5rem;
 
                 span{
@@ -290,13 +305,21 @@
 
     .mtgbullet{
         /* This controls the styling for the list in the Magic the Gather section of hobbies */
-    li{
-        list-style-type: none;
-        line-height: 0rem;
+    ul{
+        margin-top: 0;
+
+        li{
+            margin: 0;
+            list-style-type: none;
+            line-height: 0;
+            padding-left: 0;
             img{
-                width: 1rem;
+                width: 0.8rem;
+                margin-top: 0.5rem;
             }
-        }
+            }
+       }
+        
  
     }
     .mana {
@@ -307,18 +330,14 @@
     .lands{
         /* This specifically controls the line height in the lands unordered list due to it not having images */
         li{
+            margin-top: 0.5rem;
+            padding-left: 0;
             list-style-type: none;
             line-height: 1rem;
         }
     }
 
 /* This section is for the portfolio page */
-
-   div>img {
-    /* This controls the spacing between each photo.*/
-        margin-top: 1.3rem;
-    }
-
 
     .title {
         text-align: center;
@@ -327,10 +346,13 @@
     .imggallery {
         /* This controls the container for divs that contain divs with images */
         margin-top: -0.5rem;
+        div{
+            margin-top: 0;
+        }
     }
 
     div>video{
-        margin-top: 1rem;
+        margin-top: var(--rythym);
     }
     .videogallery{
         /* This controls the container for divs that contain divs with images */
@@ -339,20 +361,20 @@
 
     /* This section is for the about page */
 
-    h4:first-child{
-        margin-bottom: -0.9rem;
-    }
-
     .border{
         /* This selector styles the borders of Divs */
         border-style: solid;
         border-width: thin;
-        margin-top: 0.5rem;
-        padding: 0.5rem 0rem 0rem 0.2rem;
+        margin-top: var(--rythym);
+        padding: 0.5rem 0 0 0.2rem;
         border-color: var(--secondary-color50);
-    }
-
-    .job1{
-        /* This is my quick fix for the h4 "Web Coordinator" title on the about page */
-        margin-top: 1rem;
+        h3, h4{
+            margin: 0 0 -0.9rem 0;
+        }
+        ul{
+            margin-top: var(--rythym);
+            li{
+                margin: 0;
+            }
+        }
     }
